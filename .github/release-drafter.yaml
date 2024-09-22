@@ -1,31 +1,49 @@
-name-template: 'v$RESOLVED_VERSION 🌈'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: '$NEXT_PATCH_VERSION 🌈'
+tag-template: '$NEXT_PATCH_VERSION'
 categories:
-  - title: '🚀 Features'
-    labels:
-      - 'feature'
-      - 'enhancement'
-  - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🧰 Maintenance'
-    label: 'chore'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
-version-resolver:
-  major:
-    labels:
-      - 'major'
-  minor:
-    labels:
-      - 'minor'
-  patch:
-    labels:
-      - 'patch'
-  default: patch
-template: |
-  ## Changes
+  - title: '⚠️ Breaking API changes'
+    label:
+      - 'breaking-api-change'
+    # API changes that require major version updates, such as removing or renaming methods
 
+  - title: '🚀 Features & Enhancements'
+    label:
+      - 'feature'
+    # New features or enhancements in the project
+
+  - title: '☠️ Deprecations'
+    label:
+      - 'deprecation'
+    # Features or methods that are being phased out and may be removed in the future
+
+  - title: '🐛 Bug Fixes'
+    label:
+      - 'bug'
+    # Fixes for bugs and issues found in the project
+
+  - title: '📖 Documentation'
+    label:
+      - 'docs'
+    # Updates to the documentation, like README or other doc files
+
+  - title: '🧹 Housekeeping'
+    label:
+      - 'housekeeping'
+    # Code or infrastructure maintenance that doesn't add new features
+
+  - title: '📦 Dependency updates'
+    label:
+      - 'dependencies'
+    collapse-after: 5
+    # Updates to third-party dependencies used in the project, collapsed if too many
+template: |
+  # What's Changed
+
+  Here is a summary of all the changes for this release:
+
+  ## Features & Enhancements
+  - 🚀 New features and improvements are here! Check them out below:
   $CHANGES
+
+  ## Special Thanks
+  A big thanks to all the contributors who helped in this release!
