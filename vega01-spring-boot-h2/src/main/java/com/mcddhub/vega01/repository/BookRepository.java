@@ -3,6 +3,8 @@ package com.mcddhub.vega01.repository;
 import com.mcddhub.vega01.model.Book;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+
 
 /**
  * BookRepository
@@ -12,4 +14,5 @@ import org.springframework.data.repository.CrudRepository;
  * @date: 2024/9/22 21:38
  */
 public interface BookRepository extends CrudRepository<Book, Long> {
+    List<Book> findBooksByAuthor(String author);
 }

@@ -3,9 +3,15 @@ package com.mcddhub.vega01.controller;
 import com.mcddhub.vega01.model.Book;
 import com.mcddhub.vega01.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 /**
  * BookController
@@ -23,5 +29,16 @@ public class BookController {
     @GetMapping
     public Iterable<Book> getBooks() {
         return repository.findAll();
+    }
+
+    @GetMapping("/{author}")
+    public List<Book> findByAuthor(@PathVariable("author") String author) {
+        List<Book> bookList = repository.findBooksByAuthor(author);
+        if (CollectionUtils.isEmpty(bookList)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "Entity with author `%s` not found".formatted(author));
+        }
+
+        return bookList;
     }
 }
