@@ -12,6 +12,8 @@
     <description>study project for spring boot3</description>
     <modules>
         <module>demo01-quickstart</module>
+        <module>demo02-test-with-h2</module>
+        <module>vega01-spring-boot-h2</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

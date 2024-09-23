@@ -1,0 +1,22 @@
+server:
+  port: 9000
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: debug
+    com:
+      zaxxer:
+        hikari: debug
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    generate-unique-name: false
+    name: db
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ADMIN
