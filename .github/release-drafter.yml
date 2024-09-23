@@ -3,14 +3,14 @@ tag-template: '$NEXT_PATCH_VERSION'
 template: |
   # What's Changed
 
-  Here is a summary of all the changes for this release:
+  😨 Here is a summary of all the changes for this release:
 
   ## Features & Enhancements
-  - 🚀 New features and improvements are here! Check them out below:
+  🚀 New features and improvements are here! Check them out below:
   $CHANGES
 
   ## Special Thanks
-  A big thanks to all the contributors who helped in this release!
+  🐓 A big thanks to all the contributors who helped in this release!
 
 categories:
   - title: '⚠️ Breaking API changes'
