@@ -9,9 +9,9 @@ import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @SpringBootApplication
-public class Vega02Application {
+public class Vega03Application {
     public static void main(String[] args) {
-        SpringApplication.run(Vega02Application.class, args);
+        SpringApplication.run(Vega03Application.class, args);
     }
 
     @Bean

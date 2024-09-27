@@ -7,10 +7,11 @@ import org.springframework.context.ApplicationContext;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
-class Vega03ApplicationTest {
+class Vega02ApplicationTest {
+
     @Autowired
     ApplicationContext context;
 

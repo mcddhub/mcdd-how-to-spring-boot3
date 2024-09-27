@@ -1,0 +1,30 @@
+### List Posts
+GET http://localhost:9003/api/posts
+
+### Get Post by ID
+GET http://localhost:9003/api/posts/100
+
+### Create new Post
+POST http://localhost:9003/api/posts
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "id": 1,
+  "title": "Dan's Test Title",
+  "body": "Dan's Test Body"
+}
+
+### Update Post
+PUT http://localhost:9003/api/posts/1
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "id": 1,
+  "title": "UPDATED TITLE",
+  "body": "UPDATED BODY"
+}
+
+### Delete Post
+DELETE http://localhost:9003/api/posts/1
