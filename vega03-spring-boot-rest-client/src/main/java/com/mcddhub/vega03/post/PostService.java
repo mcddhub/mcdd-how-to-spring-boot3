@@ -1,5 +1,6 @@
 package com.mcddhub.vega03.post;
 
+import com.mcddhub.common.entity.Post;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

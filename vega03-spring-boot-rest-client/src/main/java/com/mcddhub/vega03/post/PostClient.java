@@ -1,5 +1,7 @@
 package com.mcddhub.vega03.post;
 
+import com.mcddhub.common.entity.Post;
+import com.mcddhub.common.utils.Const;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -23,7 +25,7 @@ public class PostClient {
 //        会导致一直返回 100
 //        JdkClientHttpRequestFactory factory = new JdkClientHttpRequestFactory();
         this.restClient = builder
-                .baseUrl("https://jsonplaceholder.typicode.com")
+                .baseUrl(Const.JSON_PLACEHOLDER_BASE_URL)
 //                .requestFactory(factory)
                 .build();
     }

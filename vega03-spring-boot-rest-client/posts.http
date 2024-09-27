@@ -2,7 +2,7 @@
 GET http://localhost:9003/api/posts
 
 ### Get Post by ID
-GET http://localhost:9003/api/posts/100
+GET http://localhost:9003/api/posts/1
 
 ### Create new Post
 POST http://localhost:9003/api/posts

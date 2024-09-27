@@ -1,5 +1,6 @@
 package com.mcddhub.vega03.config;
 
+import com.mcddhub.common.utils.Const;
 import com.mcddhub.vega03.user.UserHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +20,7 @@ public class UserConfiguration {
     @Bean
     UserHttpClient userHttpClient() {
         RestClient client = RestClient.builder()
-                .baseUrl("https://jsonplaceholder.typicode.com")
+                .baseUrl(Const.JSON_PLACEHOLDER_BASE_URL)
                 .build();
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(RestClientAdapter.create(client)).build();
         return factory.createClient(UserHttpClient.class);

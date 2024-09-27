@@ -39,6 +39,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.mcddhub</groupId>
+            <artifactId>mcdd-spring-boot-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

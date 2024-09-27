@@ -1,5 +1,6 @@
 package com.mcddhub.vega03.user;
 
+import com.mcddhub.common.entity.User;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
 

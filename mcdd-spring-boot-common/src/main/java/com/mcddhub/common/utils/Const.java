@@ -7,5 +7,9 @@ package com.mcddhub.common.utils;
  * @author: caobaoqi1029
  * @date: 2024/9/27 17:48
  */
-public class Const {
+public final class Const {
+    /**
+     * json placeholder base url
+     */
+    public static final String JSON_PLACEHOLDER_BASE_URL = "https://jsonplaceholder.typicode.com";
 }
